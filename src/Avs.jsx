@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { axios } from "axios";
+import  axios  from "axios";
 function Countries(){
     var [countries,setCountries]=React.useState([])
    useEffect(()=>{
@@ -9,7 +9,7 @@ function Countries(){
     })
    },[])
    return (
-    <div className="mybox">
+    <div className="box">
       <h1>Countries</h1> 
       {
         countries.length>0 && countries.map((c)=>{
