@@ -3,4 +3,22 @@
   margin: 10px;
   padding: 10px;
 }
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
+
+.not{
+  color:rgb(234, 15, 15);
+  background-color: aliceblue;
+  border-color: red;
+}
+.box{
+  margin: 50px;
+  
+}
+.p{
+  color: var(--bs-gray-400);
+  background-color: var(--bs-gray-500);
+  border:1px solid var(--bs--gray-80);
+  border-radius: .25rem;
+}
+
 

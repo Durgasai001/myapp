@@ -1,25 +1,20 @@
-import React from "react";
-import './index.css';
-function Todolist(){
-    var [todos, setTodos]=React.useState(["hello","world"])
-    function Abc(){
-        var nt=document.getElementById('df').value
-        setTodos([...todos.temp])
-
-    }
+import React from 'react';
+function Todolist(props){
+    var [todo,setTodo]=React.useState([...props.ar])
     return(
-        <div className="mybox">
-            {
-                todos.map((todo)=>{
-                    return (
-                        <li>{todo}
-                        <input type="text" id="df">
-                        <button onClick={Abc}>delete</button>
-                        </li>
-                    )
-                })
-            }
+        <div className='box'>
+            <h1>{props.title}</h1>
+            <h4>Captain:{props.head}</h4>
+            <img src={props.im.src}/>
+            <h4><u>team</u></h4>
+            <ul>
+                {
+                    todo.map((to)=>{
+                        return <li>{to}</li>
+                    })
+                }
+            </ul>
         </div>
     )
 }
-export default Todolist;
+export default Todolist;
