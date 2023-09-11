@@ -1,14 +1,13 @@
 import logo from './logo.svg' ;
 import './App.css';
-import Todolist from './todolist';
+import Counter from './prop';
 function App() {
-    return (
-        <div className="hello">
-            <h1>sai</h1>
-            <Todolist></Todolist>
-        </div>
-        
-    );
+   return(
+    <div className='App'>
+      <Counter s={100} i={10}></Counter>
+      <Counter s={200} i={5}></Counter>
+      </div>
+   )
 }
 
 export default App;
