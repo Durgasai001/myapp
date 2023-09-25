@@ -1,12 +1,20 @@
 import React from "react";
 function Todolist(){
-    var [todos, setTodos]=React.useState(["hello","world"])
+    var [todos, setTodos]=React.useState([])
+    function abc(){
+        var v=document.getElementById("ss").value 
+         setTodos([...todos,v])
+    }
     return(
-        <div className="hello">
+        <div>
+            <input type="text" id="ss"></input>
             {
                 todos.map((todo)=>{
                     return (
-                        <li>{todo}</li>
+                        <li>
+                            {todo}
+                            <button onClick={abc}>Add todo</button>
+                        </li>
                     )
                 })
             }
